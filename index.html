@@ -1,0 +1,30 @@
+<html>
+<head>
+    <base href="."/>
+</head>
+<body>
+<h1>Look at the console!</h1>
+<script type="text/javascript">
+    function attachScript(src) {
+        var newScript = document.createElement('script');
+        newScript.src = src;
+        document.body.insertBefore(newScript, document.getElementsByTagName('script')[0]);
+    }
+    function checkES6() {
+        "use strict";
+
+        try { eval("var foo = (x)=>x+1"); }
+        catch (e) { return false; }
+        return true;
+    }
+    if ( checkES6() ) {
+        attachScript('./example-1-es6.js');
+    } else {
+        console.log('ES6 is not supported by this browser - omitting example')
+    }
+    attachScript('./example-2-prototypes.js');
+    attachScript('./example-3-executing-constructors.js');
+
+</script>
+</body>
+</html>
