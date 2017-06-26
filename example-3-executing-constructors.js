@@ -1,4 +1,13 @@
 console.log('\nExample 3 - executing constructors');
+/*
+ Implementation that features calling different constructors with shared context
+ Totally manual
+ Instance of extended "Class" can't be retrieved from child unless it's reference was written somewhere manually
+ Can't access parent methods if rewritten (workaround also manual - `this._basicMove = this.move;`)
+ Features Multiple inheritance in any form (all properties duplicates will be rewritten by latest member)
+
+ This method despite it's look works best with wrapper function for inheritance. Full implementation of such function will have at least one additional copy for properties, so it's not recommended if your project constructs a lot of objects.
+ */
 
 {
     function BaseClass() {

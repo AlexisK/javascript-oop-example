@@ -1,4 +1,9 @@
 console.log('\nExample 2 - Using Prototypes');
+/*
+ Implementation with prototyping.
+ Limited to one parent per "Class"
+ Theoretically the fastest in runtime out of 3
+ */
 
 {
     function BaseClass() {
